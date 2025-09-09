@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Class 1 – Basic Card</title>
+
+  <!-- link css stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Web Warriors — Profile Card</h1>
+  </header>
+
+  <main>
+
+    <div class="card" id="profile-card">
+      <img
+        class="avatar"
+        src="./11.png"
+        alt="Profile avatar"
+        width="120"
+        height="120"
+      />
+
+      <!-- Heading + paragraph + anchor -->
+      <h2 id="student-name">Student Name</h2>
+      <p id="bio">
+        Student Bio goes here.<a href="https://mytouroone.touro.edu/dashboard">Touro.edu</a>
+        <a id="more-link" href="https://developer.mozilla.org/" target="_blank" rel="noopener">Learn more</a>
+      </p>
+
+      <!-- Unordered list + list items -->
+      <h3>Skills</h3>
+      <ul id="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      <ol>
+        <li>Python</li>
+        <li>PHP</li>
+        <li>Flutter</li>
+      </ol>
+      </ul>
+
+    
+      <div>
+        <label for="new-skill">New skill:</label>
+        <input id="new-skill" placeholder="Add a skill" />
+        <button id="add-skill" type="button">Add Skill</button>
+        <button id="toggle-bio" type="button">Hide Bio</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>2025 Web Warriors</p>
+  </footer>
+</body>
+</html>
