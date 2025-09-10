@@ -7,8 +7,16 @@ console.log(fullname('Kunga','Gurung'))
 
 
 
-function add(a,b){
-    const add=a + b
-    return add
+function fullname3(first,last){
+    const fullname3=first + " " + last
+    return fullname3
 }
-console.log(add(5,5))
+console.log(fullname3('Kunga','Gurung'))
+
+//Arow function with explicit return function
+
+const fullname2= (fname,lname) => {return 'Hello'+ ' '+ fname + " "+lname}
+console.log(fullname2('Kunga','Gurung'))
+
+
+

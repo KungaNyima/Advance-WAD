@@ -4,11 +4,28 @@
 const helloBtn = document.querySelector('#helloBtn');
 const helloOut = document.querySelector('#helloOut');
 
+function showGreetings(){
+  helloOut.textContent = 'Hello World !';
+}
+helloBtn.addEventListener('click',showGreetings);
+
+/*
+helloBtn.addEventListener('click',()=>{
+  helloOut.textContent='Hello from New York!'
+});
+*/
+
+
 
 
 // 2) LIVE INPUT + ENTER KEY -- show greeting with live input
 const nick = document.querySelector('#nick');
 const nickOut = document.querySelector('#nickOut');
+
+nick.addEventListener('input',(e)=>{
+  const val = nick.value.trim();
+  nickOut.textContent=val
+})
 
 
 // Update as the user types ('input'), set user type value in nickout and press enter
@@ -53,3 +70,5 @@ function handleAction(action) {
 }
 
 // Pass our own argument using a tiny arrow wrapper
+saveBtn.addEventListener('click',()=>handleAction('Save'));
+deleteBtn.addEventListener('click',()=>handleAction('Delete'));
