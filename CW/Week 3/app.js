@@ -19,18 +19,41 @@
  */
 
 // Your code:
-const score=90;
-if(score>=90){
+const score = 90;
+if (score >= 90) {
    console.log("A");
 }
-else if(score>=80){
+else if (score >= 80) {
    console.log("B");
 }
-else if(score >=70){
+else if (score >= 70) {
    console.log("C");
 }
-else{
+else {
    console.log("D/F");
+}
+
+/**
+ * 1.1) Grade label
+ * Input: score (0–100)
+ * Output: 'A' | 'B' | 'C' | 'D/F' using switch case
+ * Edge: <0 or >100 → 'Invalid'
+ */
+
+
+let score2 = 87;
+switch (true) {
+   case (score2 >= 90):
+      console.log("A");
+      break;
+   case (score2 >= 80):
+      console.log("B");
+      break;
+   case (score2 >= 70):
+      console.log("C");
+      break;
+   default:
+      console.log("D/F");
 }
 
 
@@ -43,7 +66,7 @@ else{
  */
 
 // Your code:
-let age=26;
+let age = 26;
 const label = age >= 18 ? 'Adult' : 'Minor'
 console.log(label)
 
@@ -56,19 +79,49 @@ console.log(label)
  */
 
 // Your code:
-
-
+const role = "admin";
+switch (role){
+   case "admin":
+      console.log('Full access');
+      break;
+   case 'editor':
+      console.log('Edit permissions');
+      break;
+   case 'viewer':
+      console.log('Read only');
+      break;
+   default:
+      console.log("No Access");
+}
 
 
 /*   Part B — Loops (for, while, for…of). */
 
 /**
  * 4) Count up with for
- * Print 1…10 (watch off-by-one)
+ * Print 1…10 (watch off-by-one) 
+ */
+
+// Your code:
+for (let i = 1; i <= 10; i++) {
+   console.log(i);
+}
+
+
+
+
+/**
+ * 4.1) print triangle using for loop 
  */
 
 // Your code:
 
+
+let height = 5;
+for (let i = 1; i <= height; i++) {
+  let row = ' '.repeat(height - i) + '*'.repeat(2 * i - 1);
+  console.log(row);
+}
 
 
 
@@ -78,9 +131,18 @@ console.log(label)
  */
 
 // Your code:
-
-
-
+let count = 5;
+while (count > 0) {
+if (count === 2) {
+count--;
+continue; // Skip this iteration
+}
+if (count === 1) {
+console.log(`Count: ${count}`);
+break; // Exit the loop early
+}
+console.log(`Count: ${count}`); count--;
+}
 
 /**
  * 6) Visit items with for…of
