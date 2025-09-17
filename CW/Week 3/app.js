@@ -151,6 +151,10 @@ console.log(`Count: ${count}`); count--;
  */
 
 // Your code:
+const skills = ['HTML','CSS','JS'];
+for(let skill of skills){
+   console.log(skill)
+}
 
 
 
@@ -167,7 +171,10 @@ console.log(`Count: ${count}`); count--;
  */
 
 // Your code:
-
+ const colors = ['red','green'];
+ colors[1]="lime";
+ colors.push('blue');
+ 
 
 
 
