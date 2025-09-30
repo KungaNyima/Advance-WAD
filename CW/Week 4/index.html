@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ch.5 DOM (Part 1) — Live Demos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Ch.5 — DOM (Part 1)</h1>
+        <p class="sub">querySelector • querySelectorAll • text/HTML • classList</p>
+    </header>
+
+    <main>
+
+        <!-- Slide 2 -->
+        <section id="s2">
+            <h2>2) querySelector (first match)</h2>
+            <p class="note">Try selecting <code>#one</code>, <code>.pick</code>, <code>'section h2'</code></p>
+            <div class="pick" id="one">Box A</div>
+            <div class="pick">Box B</div>
+        </section>
+
+        <!-- Slide 3 -->
+        <section id="s3">
+            <h2>3) querySelectorAll (many / static)</h2>
+            <ul id="todos">
+                <li class="todo">Buy milk</li>
+                <li class="todo">Email teacher</li>
+                <li class="todo">Read 10 pages</li>
+            </ul>
+            <button id="addTodo">Add .todo</button>
+            <button id="markInitial">Mark (initial snapshot)</button>
+            <button id="markFresh">Mark (re-query fresh)</button>
+        </section>
+
+        <!-- Slide 4 -->
+        <section id="s4">
+            <h2>4) textContent vs innerText</h2>
+            <p id="hiddenText"><span class="visually-hidden">[hidden]</span> Visible part</p>
+            <div id="textOut"></div>
+        </section>
+
+        <!-- Slide 5 -->
+        <section id="s5">
+            <h2>5) Setting content safely (textContent)</h2>
+            <input id="nameInput" placeholder="Type your name" />
+            <p id="safeMsg"></p>
+        </section>
+
+        <!-- Slide 6 -->
+        <section id="s6">
+            <h2>6) innerHTML (trusted only)</h2>
+            <button id="addCard">Add trusted card</button>
+            <div id="cards" class="cards"></div>
+        </section>
+
+        <!-- Slide 7 -->
+        <section id="s7">
+            <h2>7) classList basics</h2>
+            <div id="box" class="box">Box</div>
+            <button id="addActive">add('active')</button>
+            <button id="toggleHidden">toggle('hidden')</button>
+            <button id="replaceTheme">replace('old','new')</button>
+        </section>
+
+        <!-- Slide 8 -->
+        <section id="s8">
+            <h2>8) State via classes (JS + CSS)</h2>
+            <button id="openPanel">Toggle Panel</button>
+            <div id="panel" class="panel">Panel content…</div>
+        </section>
+
+        <!-- Slide 9 -->
+        <section id="s9">
+            <h2>9) Null checks & timing</h2>
+            <p>Try selecting a missing element to see a safe guard.</p>
+            <div id="nullOut"></div>
+        </section>
+
+        <!-- Slide 10 -->
+        <section id="s10">
+            <h2>10) Mini practice</h2>
+            <button id="countBtn">+1</button>
+            <span id="count">0</span>
+            <button id="warnBtn">Warn when > 5</button>
+        </section>
+    </main>
+</body>
+
+</html>
