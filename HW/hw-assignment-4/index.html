@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HW — DOM (Part 1)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>DOM Homework (Part 1)</h1>
+        <p class="sub">querySelector · text/HTML · classList</p>
+    </header>
+
+    <main>
+        <!-- Task A -->
+        <section>
+            <h2>Task A — Announcements</h2>
+            <input id="announceInput" placeholder="Type an announcement..." />
+            <button id="announceTextBtn">Post (text)</button>
+            <button id="announceHtmlBtn">Post (template)</button>
+            <div id="announceFeed"></div>
+        </section>
+
+        <!-- Task B -->
+        <section>
+            <h2>Task B — Gallery</h2>
+            <div id="gallery">
+                <figure class="tile"><img src="https://picsum.photos/seed/1/160/100" alt="">
+                    <figcaption>One</figcaption>
+                </figure>
+                <figure class="tile"><img src="https://picsum.photos/seed/2/160/100" alt="">
+                    <figcaption>Two</figcaption>
+                </figure>
+                <figure class="tile"><img src="https://picsum.photos/seed/3/160/100" alt="">
+                    <figcaption>Three</figcaption>
+                </figure>
+            </div>
+            <button id="markInitialBtn">Mark (snapshot)</button>
+            <button id="markFreshBtn">Mark (fresh)</button>
+            <button id="addTileBtn">Add Tile</button>
+        </section>
+
+        <!-- Task C -->
+        <section>
+            <h2>Task C — Todo List</h2>
+            <input id="todoInput" placeholder="New todo..." />
+            <button id="addTodoBtn">Add</button>
+            <button id="clearDoneBtn">Clear Done</button>
+            <ul id="todoList">
+                <li class="todo"><span class="label">Read 10 pages</span> <button class="todo-toggle">Done</button></li>
+                <li class="todo"><span class="label">Practice loops</span> <button class="todo-toggle">Done</button>
+                </li>
+            </ul>
+            <p id="todoStats"></p>
+        </section>
+
+        <!-- Task D -->
+        <section>
+            <h2>Task D — Panel</h2>
+            <button id="openPanelBtn">Toggle Panel</button>
+            <button id="addWarnBtn">Add warn</button>
+            <button id="removeWarnBtn">Remove warn</button>
+            <div id="panel" class="panel">
+                <p>Panel content goes here.</p>
+            </div>
+        </section>
+
+        <!-- Task E -->
+        <section>
+            <h2>Task E — Safe Select</h2>
+            <p>Select something that might not exist; handle it safely.</p>
+            <div id="nullOutput"></div>
+        </section>
+    </main>
+</body>
+
+</html>

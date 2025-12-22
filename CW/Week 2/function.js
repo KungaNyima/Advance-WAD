@@ -20,3 +20,17 @@ console.log(fullname2('Kunga','Gurung'))
 
 
 
+
+
+
+
+
+
+
+
+
+
+const naming=(fname,lname)=>{return "Hello" +" "+  fname + " " + lname}
+console.log(naming("Rapxang","Naktey"))
+
+

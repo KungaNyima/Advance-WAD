@@ -90,6 +90,18 @@ SLIDE 7 — classList basics
 
 const box = document.querySelector('#box');
 
+document.querySelector('#addActive').addEventListener('click', () => {
+  box.classList.remove('active'); // remove if present
+});
+
+document.querySelector('#toggleHidden').addEventListener('click', () => {
+  box.classList.toggle('hidden'); // toggle visibility
+});
+document.querySelector('#replaceTheme').addEventListener('click', () => {
+  box.classList.replace('old', 'new'); // only works if .old is present
+});
+
+
 
 
 /*

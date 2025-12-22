@@ -18,6 +18,24 @@
  * Edge: <0 or >100 → 'Invalid'
  */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Your code:
 const score = 90;
 if (score >= 90) {
@@ -55,9 +73,6 @@ switch (true) {
    default:
       console.log("D/F");
 }
-
-
-
 
 /**
  * 2) Adult or Minor (ternary)
@@ -107,24 +122,6 @@ for (let i = 1; i <= 10; i++) {
    console.log(i);
 }
 
-
-
-
-/**
- * 4.1) print triangle using for loop 
- */
-
-// Your code:
-
-
-let height = 5;
-for (let i = 1; i <= height; i++) {
-  let row = ' '.repeat(height - i) + '*'.repeat(2 * i - 1);
-  console.log(row);
-}
-
-
-
 /**
  * 5) Countdown with while
  * From 5 down to 1; skip printing 2 using continue
@@ -173,8 +170,12 @@ for(let skill of skills){
 // Your code:
  const colors = ['red','green'];
  colors[1]="lime";
+ console.log(colors);
  colors.push('blue');
- 
+ console.log(colors);
+ colors.pop();
+ console.log(colors);
+
 
 
 
@@ -284,3 +285,16 @@ for(let skill of skills){
 /**
  * End of worksheet — great job!
  */
+
+
+
+const form = document.querySelector('.forms')
+form.addEventListener('submit',(e)=>{
+   e.preventDefault;
+
+   const name = form.name.value;
+   const age = form.age.value;
+   console.log(name,age);
+   alert('thganks');
+   form.reset();
+});

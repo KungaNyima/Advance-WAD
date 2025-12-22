@@ -1,0 +1,274 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #cfcfd2 0%, #d5d3d8 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Header */
+.main-header {
+    text-align: center;
+    color: rgb(62, 60, 60);
+    padding: 30px 20px;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Forms Grid */
+.forms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Form Cards */
+.form-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-card-wide {
+    grid-column: 1 / -1;
+}
+
+.form-card h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Form Styles */
+.demo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+    font-size: 13px;
+}
+
+input {
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Valid State - Green */
+input.valid {
+    border-color: #28a745;
+    background-color: #f0fff4;
+}
+
+/* Invalid State - Red */
+input.invalid {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+/* Error Messages */
+.error {
+    color: #dc3545;
+    font-size: 13px;
+    min-height: 18px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Success Message */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Practice Form Styling */
+.practice-card {
+    border: 3px dashed #667eea;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe6f0 100%);
+    position: relative;
+}
+
+.exercise-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.hint {
+    color: #666;
+    font-size: 11px;
+    font-style: italic;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Textarea Styling */
+textarea {
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+    resize: vertical;
+    width: 100%;
+}
+
+textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea.valid {
+    border-color: #28a745;
+    background-color: #f0fff4;
+}
+
+textarea.invalid {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .forms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header h1 {
+        font-size: 28px;
+    }
+
+    .main-header p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .main-header {
+        padding: 20px 10px;
+    }
+}

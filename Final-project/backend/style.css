@@ -1,0 +1,117 @@
+body {
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+#cancelBtn {
+  background: #6c757d;
+  margin-left: 8px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background: #f1f3f5;
+}
+
+.action-btn {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.view-btn { background: #17a2b8; }
+.edit-btn { background: #ffc107; color: black; }
+.delete-btn { background: #dc3545; }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 22px;
+}

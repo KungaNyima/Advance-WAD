@@ -1,0 +1,18 @@
+{
+  "name": "student_mgmt_system",
+  "version": "1.0.0",
+  "description": "Student Management System (SMS) – emphasizes CRUD (Create, Read, Update, Delete) operations and administrative management.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
