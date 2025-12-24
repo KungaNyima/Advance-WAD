@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSIN 625</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>MSIN-625 Advance web and application development </h1>
+            <p class="subtitle">Complete all 11 questions by implementing the required functions in app.js</p>
+            <p class="instruction">DO NOT modify this HTML file or styles.css. Only edit app.js</p>
+            <p class="instruction">All questions can be tested in browser. Questions 1-11 can also be tested by running:
+                node app.js</p>
+        </header>
+
+        <!-- QUESTION 1: IF/ELSE - Grade Calculator -->
+        <section class="question">
+            <h2>Question 1: Grade Calculator (IF/ELSE)</h2>
+            <p>Write a function that takes a score (0-100) and returns the letter grade:</p>
+            <ul>
+                <li>90-100: 'A'</li>
+                <li>80-89: 'B'</li>
+                <li>70-79: 'C'</li>
+                <li>60-69: 'D'</li>
+                <li>Below 60: 'F'</li>
+            </ul>
+            <div class="test-area">
+                <input type="number" id="q1-score" placeholder="Enter score (0-100)" min="0" max="100">
+                <button onclick="testQuestion1()">Calculate Grade</button>
+                <p class="result" id="q1-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 2: SWITCH CASE - Day of Week -->
+        <section class="question">
+            <h2>Question 2: Day Name (SWITCH CASE)</h2>
+            <p>Write a function using SWITCH that takes a number (1-7) and returns the day name:</p>
+            <p>1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday, 7=Sunday</p>
+            <div class="test-area">
+                <input type="number" id="q2-day" placeholder="Enter day number (1-7)" min="1" max="7">
+                <button onclick="testQuestion2()">Get Day Name</button>
+                <p class="result" id="q2-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 3: ARRAY METHODS - Filter -->
+        <section class="question">
+            <h2>Question 3: Filter Adults (ARRAY FILTER)</h2>
+            <p>Write a function that takes an array of ages and returns only ages >= 18 using the filter() method.</p>
+            <div class="test-area">
+                <p>Test Array: [12, 18, 25, 15, 30, 16, 21]</p>
+                <button onclick="testQuestion3()">Filter Adults</button>
+                <p class="result" id="q3-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 4: ARRAY METHODS - Map -->
+        <section class="question">
+            <h2>Question 4: Double Numbers (ARRAY MAP)</h2>
+            <p>Write a function that takes an array of numbers and returns a new array with each number doubled using
+                map().</p>
+            <div class="test-area">
+                <p>Test Array: [1, 2, 3, 4, 5]</p>
+                <button onclick="testQuestion4()">Double Numbers</button>
+                <p class="result" id="q4-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 5: STRING METHODS - Reverse -->
+        <section class="question">
+            <h2>Question 5: Reverse String (STRING METHODS)</h2>
+            <p>Write a function that takes a string and returns it reversed.</p>
+            <p>Use string methods like split(), reverse(), join()</p>
+            <div class="test-area">
+                <input type="text" id="q5-string" placeholder="Enter a string">
+                <button onclick="testQuestion5()">Reverse String</button>
+                <p class="result" id="q5-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 6: FUNCTION WITH MULTIPLE PARAMETERS - Calculator -->
+        <section class="question">
+            <h2>Question 6: Calculator Function (FUNCTIONS)</h2>
+            <p>Write a function that takes three parameters: num1, num2, and operation (+, -, *, /).</p>
+            <p>Return the result of the operation. Use if/else or switch.</p>
+            <div class="test-area">
+                <input type="number" id="q6-num1" placeholder="First number">
+                <select id="q6-operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input type="number" id="q6-num2" placeholder="Second number">
+                <button onclick="testQuestion6()">Calculate</button>
+                <p class="result" id="q6-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 7: ARRAY REDUCE - Sum Numbers -->
+        <section class="question">
+            <h2>Question 7: Sum with Reduce (ARRAY REDUCE)</h2>
+            <p>Write a function that sums all numbers in an array using the reduce() method.</p>
+            <p>MUST use .reduce() method</p>
+            <div class="test-area">
+                <p>Test Array: [10, 20, 30, 40, 50]</p>
+                <button onclick="testQuestion7()">Sum Numbers</button>
+                <p class="result" id="q7-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 8: ARRAY FIND - Find First Adult -->
+        <section class="question">
+            <h2>Question 8: Find First Adult (ARRAY FIND)</h2>
+            <p>Write a function that finds the FIRST person who is 18 or older using the find() method.</p>
+            <p>MUST use .find() method</p>
+            <div class="test-area">
+                <p>Test Array: [Alice:15, Bob:22, Charlie:17, David:19]</p>
+                <button onclick="testQuestion8()">Find First Adult</button>
+                <p class="result" id="q8-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 9: OBJECT METHODS - Create Student -->
+        <section class="question">
+            <h2>Question 9: Create Student Object (OBJECT METHODS)</h2>
+            <p>Write a function that creates and returns a student object with name, age, grade, and a getInfo() method.
+            </p>
+            <p>getInfo() should return: "Name: [name], Age: [age], Grade: [grade]"</p>
+            <div class="test-area">
+                <input type="text" id="q9-name" placeholder="Student name">
+                <input type="number" id="q9-age" placeholder="Student age">
+                <input type="text" id="q9-grade" placeholder="Grade (A, B, C, etc.)">
+                <button onclick="testQuestion9()">Create Student</button>
+                <p class="result" id="q9-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 10: ASYNC/AWAIT & FETCH API - Fetch User Data -->
+        <section class="question">
+            <h2>Question 10: Fetch User Data (ASYNC/AWAIT & FETCH API)</h2>
+            <p>Write an async function that fetches user data from JSONPlaceholder API and returns the email address.
+            </p>
+            <p>Use async/await with fetch() to make the API request.</p>
+            <p>API Endpoint: <code>https://jsonplaceholder.typicode.com/users/1</code></p>
+            <div class="test-area">
+                <button onclick="testQuestion10()">Fetch User Email</button>
+                <p class="result" id="q10-result"></p>
+            </div>
+        </section>
+
+        <!-- QUESTION 11: FORM SUBMISSION - Handle Form Submit -->
+        <section class="question">
+            <h2>Question 11: Form Submission Handler (FORM & EVENT HANDLING)</h2>
+            <p>Write a function that handles form submission with the following requirements:</p>
+            <ul>
+                <li>Prevent the default form submission behavior (page reload)</li>
+                <li>Get values from the name and email input fields</li>
+                <li>Create a form data object with name and email properties</li>
+                <li>Display the form data in an alert (use JSON.stringify or template literal)</li>
+                <li>Console.log the form data object</li>
+            </ul>
+            <div class="test-area">
+                <form id="q11-form">
+                    <input type="text" id="q11-name" name="name" placeholder="Enter your name" required>
+                    <input type="email" id="q11-email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Submit Form</button>
+                </form>
+                <p class="note">Check the alert and browser console after submitting</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Total Questions: 11 | Time: 1.5 hours | Total Points: 100 | Good Luck!</p>
+            <p style="margin-top: 10px;">📝 Test in browser OR run: <code
+                    style="background: #f0f0f0; padding: 2px 8px; border-radius: 4px;">node app.js</code></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -11,11 +11,7 @@ const book = {
 };
 // TODO 1: Use Object.keys() to get all the keys from the book object
 // Save it in a variable called bookKeys and print it
-const bookKeys = Object.keys(book);
-console.log(bookKeys);
 
-const bookKeys = Object.keys(book);
-console.log(bookKeys);
 
 // TODO 2: Use Object.values() to get all the values from the book object
 // Save it in a variable called bookValues and print it

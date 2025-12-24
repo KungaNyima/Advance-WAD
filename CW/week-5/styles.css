@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  padding: 20px;
+  color: #000;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.demo-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.demo-section p {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #555;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+  margin: 5px 0;
+}
+
+input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+input:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+.output {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-left: 4px solid #000;
+  border-radius: 4px;
+  min-height: 40px;
+  font-family: monospace;
+  color: #000;
+}
+
+.clickable-box {
+  padding: 30px;
+  background: #e0e0e0;
+  border: 2px dashed #333;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.inner-btn {
+  margin: 10px;
+}
+
+.inner-text {
+  display: block;
+  margin-top: 10px;
+  color: #000;
+}
+
+.outer-box,
+.middle-box,
+.inner-box {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.outer-box {
+  background: #f5f5f5;
+}
+
+.middle-box {
+  background: #e0e0e0;
+}
+
+.inner-box {
+  background: #d0d0d0;
+}
+
+#todo-list {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.todo {
+  padding: 10px;
+  background: #f9f9f9;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo.done {
+  background: #e0e0e0;
+}
+
+.todo.done .text {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.todo .toggle {
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.todo .text {
+  flex: 1;
+}
+
+.todo .delete {
+  background: #666;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+#char-count {
+  margin-left: 10px;
+  color: #000;
+  font-size: 14px;
+}
+
+#email-status {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.focus-input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.focus-input:focus {
+  background: #f5f5f5;
+}
+
+#demo-link {
+  display: inline-block;
+  margin: 10px 0;
+  color: #000;
+  text-decoration: underline;
+}
+
+.console-note {
+  padding: 10px;
+  background: #fff3cd;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #000;
+}

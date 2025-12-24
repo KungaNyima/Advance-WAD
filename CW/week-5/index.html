@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events Demo - Complete</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>DOM Events Interactive Demo</h1>
+
+        <!-- SLIDE 2: Event Listener Essentials -->
+        <section class="demo-section">
+            <h2>1. Event Listener Essentials</h2>
+            <p>Click buttons to see different event options</p>
+
+            <button id="normal-btn">Normal Click</button>
+            <button id="once-btn">Once Only</button>
+            <button id="capture-btn">Capture Phase</button>
+
+            <div class="output" id="output-1"></div>
+        </section>
+
+        <!-- SLIDE 3: Event Object -->
+        <section class="demo-section">
+            <h2>2. The Event Object (e)</h2>
+            <p>Click anywhere in the box below</p>
+
+            <div id="event-box" class="clickable-box">
+                <button class="inner-btn">Inner Button</button>
+                <span class="inner-text">Click me or the button!</span>
+            </div>
+
+            <div class="output" id="output-2"></div>
+        </section>
+
+        <!-- SLIDE 4: preventDefault -->
+        <section class="demo-section">
+            <h2>3. Prevent Default Actions</h2>
+
+            <form id="demo-form">
+                <input type="text" name="username" placeholder="Enter username" required>
+                <button type="submit">Submit (No Reload!)</button>
+            </form>
+
+            <a href="https://google.com" id="demo-link">Click this link (Won't navigate)</a>
+
+            <div class="output" id="output-3"></div>
+        </section>
+
+        <!-- SLIDE 5: Bubbling & Capturing -->
+        <section class="demo-section">
+            <h2>4. Event Propagation</h2>
+            <p>Click the inner box to see bubbling in console</p>
+
+            <div id="outer-box" class="outer-box">
+                Outer
+                <div id="middle-box" class="middle-box">
+                    Middle
+                    <div id="inner-box" class="inner-box">
+                        Inner (Click me!)
+                    </div>
+                </div>
+            </div>
+
+            <button id="toggle-stop">Toggle stopPropagation</button>
+
+            <div class="console-note">
+                👉 Open your browser console (F12) to see propagation order!
+            </div>
+        </section>
+
+        <!-- SLIDE 6 & 7: Event Delegation -->
+        <section class="demo-section">
+            <h2>5. Event Delegation</h2>
+            <p>One listener handles all todo items (including new ones)</p>
+
+            <div id="todo-container">
+                <ul id="todo-list">
+                    <li class="todo">
+                        <span class="toggle">☐</span>
+                        <span class="text">Learn addEventListener</span>
+                        <button class="delete">Delete</button>
+                    </li>
+                    <li class="todo">
+                        <span class="toggle">☐</span>
+                        <span class="text">Master event delegation</span>
+                        <button class="delete">Delete</button>
+                    </li>
+                </ul>
+                <button id="add-todo">Add New Todo</button>
+            </div>
+
+            <div class="output" id="output-5"></div>
+        </section>
+
+        <!-- SLIDE 8: Keyboard Events -->
+        <section class="demo-section">
+            <h2>6. Keyboard Events</h2>
+            <p>Type in the input below. Press Enter to save, Escape to clear</p>
+
+            <input type="text" id="keyboard-input" placeholder="Type here...">
+
+            <div class="output" id="output-6"></div>
+            <div class="output" id="key-info"></div>
+        </section>
+
+        <!-- SLIDE 9: Focus & Blur -->
+        <section class="demo-section">
+            <h2>7. Focus & Blur (Accessibility)</h2>
+            <p>Tab through inputs or click them</p>
+
+            <div class="form-group">
+                <input type="text" class="focus-input" placeholder="First Name">
+                <input type="text" class="focus-input" placeholder="Last Name">
+                <input type="email" class="focus-input" placeholder="Email">
+            </div>
+
+            <div class="output" id="output-7"></div>
+        </section>
+
+        <!-- SLIDE 10: Forms (input, change, submit) -->
+        <section class="demo-section">
+            <h2>8. Forms: Input vs Change vs Submit</h2>
+
+            <form id="name-form">
+                <div class="form-group">
+                    <label for="name-field">Name (input event):</label>
+                    <input type="text" id="name-field" maxlength="20">
+                    <span id="char-count">0 / 20</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email-field">Email (change event):</label>
+                    <input type="email" id="email-field">
+                    <span id="email-status"></span>
+                </div>
+
+                <button type="submit">Submit Form</button>
+            </form>
+
+            <div class="output" id="output-8"></div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
